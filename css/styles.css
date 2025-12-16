@@ -13,40 +13,45 @@ body {
 }
 
 /* CONTENEDOR */
-.container {
+.container{
   max-width: 1100px;
   margin: auto;
-  padding: 2.5rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 /* HEADER */
-.header {
+.header{
   background: #ffffff;
   border-bottom: 1px solid #eee;
 }
 
-.header-content {
+.header-content{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.8rem 0;
 }
 
-.logo {
-  height: 58px;
+.logo{
+  height: 90px;       /* 🔥 antes estaba muy pequeño */
+  width: auto;
 }
+
 
 /* HERO */
-.hero {
+.hero{
   background: linear-gradient(180deg, #ffffff 0%, #fff3f5 100%);
-  padding: 4.5rem 1.5rem;
+  padding: 3.2rem 1.5rem 3rem;
 }
 
-.hero-grid {
+
+.hero-grid{
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.5rem;        /* antes estaba exagerado */
   align-items: center;
 }
+
 
 .hero-textbox {
   text-align: left;
@@ -77,11 +82,11 @@ body {
   align-items: center;
 }
 
-.teji-img {
-  width: min(320px, 85%);
+.teji-img{
+  width: 360px;
+  max-width: 90%;
   height: auto;
-  opacity: 0.98;
-  filter: drop-shadow(0 12px 22px rgba(0,0,0,0.08));
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.1));
 }
 
 /* BOTONES */
@@ -168,26 +173,31 @@ body {
 }
 
 /* RESPONSIVE */
-@media (max-width: 820px) {
-  .hero-grid {
+@media (max-width: 820px){
+  .hero{
+    padding: 2.5rem 1.2rem;
+  }
+
+  .hero-grid{
     grid-template-columns: 1fr;
+    gap: 1.2rem;
     text-align: center;
   }
 
-  .hero-textbox {
+  .hero-textbox{
     text-align: center;
   }
 
-  .hero-text {
-    margin-left: auto;
-    margin-right: auto;
+  .teji-img{
+    width: 260px;
+    margin: 0 auto;
   }
 
-  .teji-img {
-    width: min(300px, 78vw);
-    margin-top: 1.2rem;
+  .logo{
+    height: 70px;
   }
 }
+
 
 /* --- FIXES DE IMÁGENES Y ESPACIADOS --- */
 
